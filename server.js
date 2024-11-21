@@ -56,8 +56,5 @@ app.post("/update-gift", (req, res) => {
     );
 });
 
-// Iniciar servidor
-const PORT = 3000;
-app.listen(PORT, () => {
-    console.log(`Servidor rodando em http://localhost:${PORT}`);
-});
+// Exporte a aplicação para ser tratada como uma função serverless no Vercel
+module.exports = app;
